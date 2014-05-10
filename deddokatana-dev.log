@@ -1,0 +1,19 @@
+Todo:
+add listUnsoldItemsAsDictOfDicts function to command class.
+
+Todo:
+ADD AN ITEM CLASS!!
+this way we can ply functions to it such "sell" or "update item details" or "get listing status" etc
+
+
+
+
+
+ shall we do the full blown opensource ebay API? our name in epic credits,
+ and a "hint hint" for the ebay execs to our donate buttons :D
+
+
+contact me on:
+
+DeveloperContacts = {deddokatana:{name:'Jason Crockett',twitter:'@deddokatana',skype:'deddokatana' \
+email:'deddokatana@gmail.com', message:'webdev gods we shall be!'}}
