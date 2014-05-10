@@ -74,5 +74,8 @@ class Command(BaseCommand):
             for item in response.UnsoldList.ItemArray.Item:
                 unsold_items.append(item)
         return unsold_items
+
+
+    #damnit just push to the repo allready!
                 
 
