@@ -37,7 +37,7 @@ INCLUDABLE_SECTIONS = set(
 class Command(BaseCommand):
     #args = '<response_section response_section ...>'
     help = ("It's recommended to limit the included sections to only those "\
-            "needed. Choose from: %s" % ', '.join(INCLUDABLE_SECTIONS)
+            "needed. Choose from: %s" % ', '.join(INCLUDABLE_SECTIONS))
 
     option_list = BaseCommand.option_list + (
         make_option('--for',
@@ -50,6 +50,7 @@ class Command(BaseCommand):
     )
 
     def handle(self, *args, **options):
+        unsold_items = [] # @dedddokatana edit.
         ebay_kwargs = {}
         # note: keys are always present in options dict (with None value) even if not given by user
         if options['wsdl']:
@@ -71,5 +72,7 @@ class Command(BaseCommand):
         response = client.GetMyeBaySelling(DetailLevel='ReturnAll')
         if response and response.Ack.lower() in ("success","warning"):
             for item in response.UnsoldList.ItemArray.Item:
+                unsold_items.append(item)
+        return unsold_items
                 
 
