@@ -73,9 +73,7 @@ class Command(BaseCommand):
         if response and response.Ack.lower() in ("success","warning"):
             for item in response.UnsoldList.ItemArray.Item:
                 unsold_items.append(item)
-        return unsold_items
+        return unsold_items # this is to create a page of your items for sale / list items in an app.
 
 
-    #damnit just push to the repo allready!
-                
 
